@@ -99,9 +99,4 @@ Os testes ficam em `test.js`, organizados com `describe`:
 | Reinicialização da partida | Nova partida com os mesmos jogadores e estado limpo. |
 | Partidas completas simuladas | 100 partidas automáticas do início ao fim, conferindo 28 peças, mesa conectada e resultado coerente. |
 
-## Colaboradores
 
-| Nome | Contribuição |
-| --- | --- |
-| Danilo Rosa | _a preencher_ |
-| _Nome do segundo integrante_ | _a preencher_ |
