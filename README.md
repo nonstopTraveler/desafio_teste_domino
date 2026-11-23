@@ -4,6 +4,13 @@ Projeto da disciplina de Projeto, Implementação e Teste de Software. O objetiv
 
 O jogo roda direto no navegador, sem instalar nada. Os testes rodam no Node.js.
 
+## Colaboradores
+
+| Nome | RA |
+|---|---|
+| Danilo Antonio Alves Rosa | 24047644-2 |
+| Renan Homiak Guimarães | 24000668-2 |
+
 ## Regras implementadas
 
 - 28 peças, de `[0,0]` até `[6,6]`, sem repetição.
@@ -62,7 +69,7 @@ desafio_teste_domino/
 ### Funções básicas (`index.js`)
 
 | Função | O que faz |
-| --- | --- |
+|---|---|
 | `validarPeca(peca)` | Confere se é um array `[a, b]` com inteiros de 0 a 6. |
 | `podeConectar(peca, extremidade)` | Diz se a peça tem um lado igual à ponta da mesa. |
 | `conectar(peca, extremidade)` | Devolve a peça girada com o número da ponta na frente, ou `null` se não encaixa. |
@@ -80,7 +87,7 @@ A partida é um objeto simples (`jogadores`, `maos`, `monte`, `mesa`, `vez`, `st
 Os testes ficam em `test.js`, organizados com `describe`:
 
 | Grupo | O que verifica |
-| --- | --- |
+|---|---|
 | `validarPeca`, `podeConectar`, `conectar`, `validarJogadores`, `venceu` | As cinco funções básicas, incluindo entradas inválidas (null, textos, números fora do intervalo). |
 | Geração das peças | 28 peças, sem repetição, de `[0,0]` a `[6,6]`, 7 duplas, soma total 168. |
 | Embaralhamento | Mantém as peças, não altera a lista original, é reproduzível com semente e recusa entradas inválidas. |
@@ -98,5 +105,3 @@ Os testes ficam em `test.js`, organizados com `describe`:
 | Empate por pontuação | Bloqueio com pontos iguais. |
 | Reinicialização da partida | Nova partida com os mesmos jogadores e estado limpo. |
 | Partidas completas simuladas | 100 partidas automáticas do início ao fim, conferindo 28 peças, mesa conectada e resultado coerente. |
-
-
