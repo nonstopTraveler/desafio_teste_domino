@@ -1,4 +1,4 @@
-# Desafio de Testes de Software: Dominó
+# Desafio Dominó
 
 Projeto da disciplina de Testes de Software (Engenharia de Software). O objetivo é implementar um jogo de dominó duplo-seis para duas pessoas e garantir, com testes automatizados, que as regras funcionam de verdade.
 
