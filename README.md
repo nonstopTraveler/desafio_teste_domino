@@ -1,6 +1,6 @@
 # Desafio Dominó
 
-Projeto da disciplina de Testes de Software (Engenharia de Software). O objetivo é implementar um jogo de dominó duplo-seis para duas pessoas e garantir, com testes automatizados, que as regras funcionam de verdade.
+Projeto da disciplina de Projeto, Implementação e Teste de Software. O objetivo é implementar um jogo de dominó duplo-seis para duas pessoas e garantir, com testes automatizados, que as regras funcionam de verdade.
 
 O jogo roda direto no navegador, sem instalar nada. Os testes rodam no Node.js.
 
