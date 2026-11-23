@@ -1,0 +1,13 @@
+{
+  "name": "desafio_teste_domino",
+  "version": "2.0.0",
+  "description": "Jogo de dominó para dois jogadores com testes automatizados (Testes de Software)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "ISC"
+}

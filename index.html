@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dominó para dois jogadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <main id="tela-inicio" class="tela">
+    <h1 class="titulo">Dominó</h1>
+    <p class="subtitulo">Duplo-seis para dois jogadores no mesmo dispositivo</p>
+
+    <form id="form-jogadores" class="cartao" novalidate>
+      <label for="nome1">Jogador 1</label>
+      <input id="nome1" type="text" maxlength="20" autocomplete="off" placeholder="Nome do jogador 1">
+
+      <label for="nome2">Jogador 2</label>
+      <input id="nome2" type="text" maxlength="20" autocomplete="off" placeholder="Nome do jogador 2">
+
+      <p id="erro-nomes" class="erro" role="alert"></p>
+      <button type="submit" class="botao principal">Iniciar partida</button>
+    </form>
+
+    <section class="cartao regras">
+      <h2>Como funciona</h2>
+      <ul>
+        <li>São 28 peças. Cada jogador recebe 7 e as outras 14 ficam no monte.</li>
+        <li>Começa quem tiver a maior peça dupla, e ela abre a partida.</li>
+        <li>Jogue uma peça que tenha o mesmo número de uma das pontas da mesa.</li>
+        <li>Sem peça para jogar, compre do monte. Com o monte vazio, passe a vez.</li>
+        <li>Vence quem ficar sem peças. Se o jogo bloquear, vence quem tiver menos pontos na mão.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Tela de troca de jogador (esconde as peças) -->
+  <main id="tela-transicao" class="tela" hidden>
+    <div class="cartao centro">
+      <p id="transicao-mensagem" class="aviso"></p>
+      <h2 id="transicao-titulo"></h2>
+      <p>Passe o dispositivo para essa pessoa. As peças só aparecem depois do clique.</p>
+      <button id="botao-pronto" type="button" class="botao principal">Estou pronto</button>
+    </div>
+  </main>
+
+  <!-- Tela da partida -->
+  <main id="tela-jogo" class="tela" hidden>
+    <header class="placar">
+      <div id="placar-0" class="jogador"></div>
+      <div id="placar-monte" class="monte"></div>
+      <div id="placar-1" class="jogador"></div>
+    </header>
+
+    <p id="mensagem" class="mensagem" role="status"></p>
+
+    <section class="mesa-area" aria-label="Mesa">
+      <div id="escolha-lado" class="escolha-lado" hidden>
+        <span>Onde encaixar?</span>
+        <button id="botao-esquerda" type="button" class="botao"></button>
+        <button id="botao-direita" type="button" class="botao"></button>
+      </div>
+      <div id="mesa" class="mesa"></div>
+    </section>
+
+    <section class="mao-area" aria-label="Sua mão">
+      <h2 id="titulo-mao"></h2>
+      <div id="mao" class="mao"></div>
+      <div class="acoes">
+        <button id="botao-comprar" type="button" class="botao">Comprar peça</button>
+        <button id="botao-passar" type="button" class="botao">Passar a vez</button>
+      </div>
+      <p id="dica-acoes" class="dica"></p>
+    </section>
+  </main>
+
+  <!-- Tela final -->
+  <main id="tela-fim" class="tela" hidden>
+    <div class="cartao centro">
+      <h2 id="fim-titulo"></h2>
+      <p id="fim-detalhe"></p>
+      <ul id="fim-pontos" class="lista-pontos"></ul>
+      <div class="acoes">
+        <button id="botao-nova" type="button" class="botao principal">Nova partida</button>
+        <button id="botao-trocar" type="button" class="botao">Trocar jogadores</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+  <script src="game-logic.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
