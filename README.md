@@ -25,7 +25,7 @@ O jogo roda direto no navegador, sem instalar nada. Os testes rodam no Node.js.
 
 Como os dois jogam no mesmo dispositivo, a cada troca de vez aparece uma tela pedindo que o próximo jogador assuma. As peças só aparecem depois do clique em "Estou pronto".
 
-## Como iniciar o jogo
+## Como fazer o jogo rodar e iniciar
 
 Abra o arquivo `index.html` no navegador (duplo clique), digite o nome dos dois jogadores e clique em "Iniciar partida". Não precisa de servidor nem de internet.
 
